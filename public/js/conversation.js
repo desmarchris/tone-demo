@@ -26,7 +26,7 @@ var ConversationPanel = (function() {
   /**
    * getMealType determines what meal a user of the app might have eaten most
    * recently. It uses the client's browser time.
-   * 
+   *
    * @returns {string} a string indicating the meal the user most likely ate
    *          recently - breakfast, lunch, dinner
    */
@@ -49,7 +49,7 @@ var ConversationPanel = (function() {
     // Add the time context variable to indicate what meal the user may be
     // eating
     var context = {
-      'time': getMealType()
+      
     };
     Api.sendRequest(' ', context);
     setupInputBox();

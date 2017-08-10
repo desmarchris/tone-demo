@@ -1,13 +1,13 @@
 ---
 declared-services:
   conversation-service:
-    label: conversation
+    label: conversation-prod
     plan: standard
   tone-analyzer-standard:
     label: tone_analyzer
     plan: standard
 applications:
-- name: tone-ce
+- name: ce-tone-demo
   command: npm start
   path: .
   instances: 1

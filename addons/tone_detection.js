@@ -27,10 +27,10 @@ var Promise = require('bluebird');
  * These thresholds can be adjusted to client/domain requirements.
  */
 var PRIMARY_EMOTION_SCORE_THRESHOLD = 0.5;
-var LANGUAGE_HIGH_SCORE_THRESHOLD = 0.75;
-var LANGUAGE_NO_SCORE_THRESHOLD = 0.0;
-var SOCIAL_HIGH_SCORE_THRESHOLD = 0.75;
-var SOCIAL_LOW_SCORE_THRESHOLD = 0.25;
+// var LANGUAGE_HIGH_SCORE_THRESHOLD = 0.75;
+// var LANGUAGE_NO_SCORE_THRESHOLD = 0.0;
+// var SOCIAL_HIGH_SCORE_THRESHOLD = 0.75;
+// var SOCIAL_LOW_SCORE_THRESHOLD = 0.25;
 
 /**
  * Labels for the tone categories returned by the Watson Tone Analyzer
@@ -133,7 +133,7 @@ function updateUserTone(conversationPayload, toneAnalyzerPayload, maintainHistor
  *          the current tone for a conversation instance with a user.
  */
 function initUser() {
-  return ({
+  return {
     'tone': {
       'emotion': {
         'current': null
@@ -144,6 +144,5 @@ function initUser() {
       // 'social': {
       //   'current': null
       }
-    }
-  });
-}
+  }
+};
