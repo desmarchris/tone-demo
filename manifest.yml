@@ -1,9 +1,9 @@
 ---
 declared-services:
-  conversation-service:
-    label: conversation-prod
+  conversation-prod:
+    label: conversation
     plan: standard
-  tone-analyzer-standard:
+  tone-analyzer:
     label: tone_analyzer
     plan: standard
 applications:
@@ -11,6 +11,9 @@ applications:
   command: npm start
   path: .
   instances: 1
+  services:
+  - Conversation-prod
+  - Tone Analyzer-0b
   memory: 256MB
   env:
     NPM_CONFIG_PRODUCTION: false
