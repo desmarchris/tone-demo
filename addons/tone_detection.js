@@ -1,12 +1,12 @@
 /**
  * Copyright 2015 IBM Corp. All Rights Reserved.
- * 
+ *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
  * the License at
- * 
+ *
  * http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
  * WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
@@ -36,8 +36,8 @@ var SOCIAL_LOW_SCORE_THRESHOLD = 0.25;
  * Labels for the tone categories returned by the Watson Tone Analyzer
  */
 var EMOTION_TONE_LABEL = 'emotion_tone';
-var LANGUAGE_TONE_LABEL = 'language_tone';
-var SOCIAL_TONE_LABEL = 'social_tone';
+// var LANGUAGE_TONE_LABEL = 'language_tone';
+// var SOCIAL_TONE_LABEL = 'social_tone';
 
 /**
  * Public functions for this module
@@ -51,7 +51,7 @@ module.exports = {
 /**
  * invokeToneAsync is an asynchronous function that calls the Tone Analyzer
  * service and returns a Promise
- * 
+ *
  * @param {Json}
  *                conversationPayload json object returned by the Watson
  *                Conversation Service
@@ -82,7 +82,7 @@ function invokeToneAsync(conversationPayload, toneAnalyzer) {
  * language and social tones, and identify the meaningful tones (i.e., those
  * tones that meet the specified thresholds). The conversationPayload json
  * object is updated to include these tones.
- * 
+ *
  * @param {Json}
  *                conversationPayload json object returned by the Watson
  *                Conversation Service
@@ -96,8 +96,8 @@ function invokeToneAsync(conversationPayload, toneAnalyzer) {
  */
 function updateUserTone(conversationPayload, toneAnalyzerPayload, maintainHistory) {
   var emotionTone = null;
-  var languageTone = null;
-  var socialTone = null;
+  // var languageTone = null;
+  // var socialTone = null;
 
   if (!conversationPayload.context) {
     conversationPayload.context = {};
@@ -126,7 +126,7 @@ function updateUserTone(conversationPayload, toneAnalyzerPayload, maintainHistor
 /**
  * initToneContext initializes a user object containing tone data (from the
  * Watson Tone Analyzer)
- * 
+ *
  * @returns {Json} user json object with the emotion, language and social tones.
  *          The current tone identifies the tone for a specific conversation
  *          turn, and the history provides the conversation for all tones up to
@@ -137,12 +137,12 @@ function initUser() {
     'tone': {
       'emotion': {
         'current': null
-      },
-      'language': {
-        'current': null
-      },
-      'social': {
-        'current': null
+      }
+      // 'language': {
+      //   'current': null
+      // },
+      // 'social': {
+      //   'current': null
       }
     }
   });

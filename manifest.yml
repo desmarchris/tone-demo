@@ -2,15 +2,15 @@
 declared-services:
   conversation-service:
     label: conversation
-    plan: free
+    plan: standard
   tone-analyzer-standard:
     label: tone_analyzer
     plan: standard
 applications:
-- name: tone-ce-demo
+- name: tone-ce
   command: npm start
   path: .
   instances: 1
-  memory: 512MB
+  memory: 256MB
   env:
     NPM_CONFIG_PRODUCTION: false
