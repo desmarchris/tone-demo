@@ -1,4 +1,4 @@
-# Food Coach sample application [![Build Status](https://travis-ci.org/watson-developer-cloud/food-coach.svg?branch=master)](https://travis-ci.org/watson-developer-cloud/food-coach)
+# Tone Analyzer Customer Engagement and Conversation Demo
 
 This application demonstrates how the Watson Conversation service can be adapted to use Tone Analyzer's tone along with intents and entities in a simple chat interface.
 
